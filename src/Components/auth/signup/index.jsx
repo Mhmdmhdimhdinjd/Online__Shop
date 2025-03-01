@@ -12,8 +12,6 @@ import { registerUser } from '/src/redux/reducers/AuthSlice';
 
 const SignUpComponent = () => {
 
-    // const loged = useRef(false)
-
     let userSchema = object({
         username: string().required('ورود این مقادیر الزامیست'),
         password: string().required('ورود این مقادیر الزامیست')
@@ -43,7 +41,7 @@ const SignUpComponent = () => {
                 console.log('Sign up successed by backend')
                 let redirectPath = localStorage.getItem('userredirect');
                 dispatch(registerUser(data));
-                navigate(redirectPath || '/onlineshop-nini')
+                navigate(redirectPath || '/Online__Shop')
                 reset()
 
                 }

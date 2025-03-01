@@ -48,7 +48,7 @@ const Product = ({ product }) => {
             <CardContent
                 sx={{ px: 2, py: 2, display: 'flex', flexDirection: 'column' }}>
 
-                <Link sx={{ textDecoration: 'none', color: 'inherit' }} to={`/onlineshop-nini/product/${product.id}`}>
+                <Link sx={{ textDecoration: 'none', color: 'inherit' }} to={`/Online__Shop/product/${product.id}`}>
 
                     <Typography variant='p' component="div" sx={{ fontWeight: 'bold', mb: 1, textDecoration: 'none', color: 'black' }}>{product.title}</Typography>
 

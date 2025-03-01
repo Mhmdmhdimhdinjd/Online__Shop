@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-// import{addItem} from '../../redux/reducers/CartReducer'
-import axios from "axios";
 import ProductGrid from "../productGrid/Productgrid";
 import Product from "../product/product";
 import { Typography, Box, CircularProgress, } from "@mui/material";

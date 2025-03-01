@@ -18,7 +18,7 @@ const Notfoundcomponent = () => {
             >
                 کجا میخوای بری؟
             </Typography>
-            <Link to='/onlineshop-nini/home'>
+            <Link to='/Online__Shop/home'>
                 <Button variant="contained" color="warning" size="large" >بیا بریم خونه</Button>
             </Link>
         </Box>

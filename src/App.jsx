@@ -2,14 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Provider } from "react-redux";
-import { Container } from '@mui/material';
-import Navbar from './Components/Navbar/Index';
-import LoginComponent from './Components/auth/Login/Index';
 import store from './redux/store'
-import Intro from './Components/Inro/introcontainer'
-import ProductShowcase from './Components/productslist/ProductShowcase';
-import Slider from './Components/Slider/Slider'
-
 import Home from './pages/Home/index'
 import Products from './pages/Products/index';
 import Notfound from './pages/Notfound/Notfound';
@@ -22,28 +15,6 @@ import AddProduct from './pages/AddProduct/AddProduct';
 
 const App = () => {
 
-  // return (
-  //   < Provider store={store}>
-
-  //     <Navbar />
-
-  //     <Container>
-
-  //       <Slider/>
-
-  //       {/* <LoginComponent /> */}
-
-  //       <Intro />
-
-  //       {/* <ProductShowcase /> */}
-
-  //       <Products/>
-
-  //     </Container>
-
-
-  //   </Provider>
-  // );
 
   return (
 
@@ -53,21 +24,21 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/onlineshop-nini/' element={<Home />} />
+          <Route path='/Online__Shop/' element={<Home />} />
 
-          <Route path='/onlineshop-nini/Home' element={<Home />} />
+          <Route path='/Online__Shop/Home' element={<Home />} />
 
-          <Route path="/onlineshop-nini/profile" element={<Profile />} />
+          <Route path="/Online__Shop/profile" element={<Profile />} />
 
-          <Route path="/onlineshop-nini/Products" element={<Products />} />
+          <Route path="/Online__Shop/Products" element={<Products />} />
 
-          <Route path="/onlineshop-nini/product/:id" element={<ProductDetails />}/>
+          <Route path="/Online__Shop/product/:id" element={<ProductDetails />}/>
 
-          <Route path="/onlineshop-nini/Shoppingbasket" element={<PrivateRoute><Shoppingbasket /></PrivateRoute>} />
+          <Route path="/Online__Shop/Shoppingbasket" element={<PrivateRoute><Shoppingbasket /></PrivateRoute>} />
 
-          <Route path='/onlineshop-nini/add-product' element={<AddProduct/>}/>
+          <Route path='/Online__Shop/add-product' element={<AddProduct/>}/>
 
-          <Route path="/onlineshop-nini/*" element={<Notfound />} />
+          <Route path="/Online__Shop/*" element={<Notfound />} />
 
         </Routes>
 

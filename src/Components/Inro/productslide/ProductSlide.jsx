@@ -48,7 +48,7 @@ const ProductSlide = ({ product }) => {
                 <CardContent
                     sx={{ px: 2, py: 2, flex: '1 0 auto', height: 140 }}>
 
-                    <Link sx={{ textDecoration: 'none', color: 'inherit' }} to={`/onlineshop-nini/product/${product.id}`}>
+                    <Link sx={{ textDecoration: 'none', color: 'inherit' }} to={`/Online__Shop/product/${product.id}`}>
 
                     <Typography variant='p' component="div" sx={{ fontWeight: 'bold', mb: 1, color: 'black' }}>
 

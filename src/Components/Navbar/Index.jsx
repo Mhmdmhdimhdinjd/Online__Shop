@@ -77,10 +77,10 @@ function NavBar() {
   const list = () => (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
-        <ListItem component={WhiteButton} endIcon={<ShoppingCartOutlinedIcon />} onClick={() => navigate("/onlineshop-nini/Shoppingbasket")}>
+        <ListItem component={WhiteButton} endIcon={<ShoppingCartOutlinedIcon />} onClick={() => navigate("/Online__Shop/Shoppingbasket")}>
           <Typography fontFamily={'gandom'} fontSize={14}>سبد خرید</Typography>
         </ListItem>
-        <ListItem component={WhiteButton} endIcon={<LoginOutlinedIcon/> } onClick={() => navigate('/onlineshop-nini/profile')}>
+        <ListItem component={WhiteButton} endIcon={<LoginOutlinedIcon/> } onClick={() => navigate('/Online__Shop/profile')}>
           <Typography fontFamily={'gandom'} fontSize={14}>{logeduser ? 'پروفایل' : 'ثبت نام  |  ورود'}</Typography>
         </ListItem>
       </List>
@@ -102,11 +102,11 @@ function NavBar() {
                 color="inherit"
                 aria-label="shopping Basket"
                 sx={{ mr: 2 }}
-                onClick={() => navigate("/onlineshop-nini/Shoppingbasket")}
+                onClick={() => navigate("/Online__Shop/Shoppingbasket")}
               >
                 <ShoppingCartOutlinedIcon />
               </IconButton>
-              <WhiteButton onClick={() => navigate('/onlineshop-nini/profile')} size="small" endIcon={<LoginOutlinedIcon />}>
+              <WhiteButton onClick={() => navigate('/Online__Shop/profile')} size="small" endIcon={<LoginOutlinedIcon />}>
                 <Typography fontFamily={'gandom'} fontSize={14}>
                   {logeduser ? 'پروفایل' : 'ثبت نام  |  ورود'}
                 </Typography>
@@ -140,7 +140,7 @@ function NavBar() {
               />
             </Search>
 
-            <img src={brandFullHorizontal} alt="Logo" style={{ maxWidth: '100px', margin: '0 0 0 1rem' }} />
+            <img onClick={() => navigate("/Online__Shop")} src={brandFullHorizontal} alt="Logo" style={{ maxWidth: '100px', margin: '0 0 0 1rem' }} />
 
           </Box >
 
