@@ -1,4 +1,4 @@
-import { Button, Container, Grid, ThemeProvider, createTheme, Box} from '@mui/material';
+import { Button, Container, Grid, ThemeProvider, createTheme, Box } from '@mui/material';
 import Selectcomponentcontainer from '../../Components/Add product/selectcomponents/container';
 import TextFieldcomponentcontainer from "../../Components/Add product/textFieldcomponents/container";
 import { useForm, Controller } from 'react-hook-form';
@@ -9,8 +9,7 @@ import { setInformation } from '../../redux/reducers/Slice';
 import AddProductHandler from '../../ReactQuery/AddProduct';
 import NavBar from '../../Components/Navbar/Index';
 import Footer from '../../Components/Footer';
-
-
+import { useQueryClient } from 'react-query';
 
 const theme = createTheme({
     typography: {
@@ -44,6 +43,8 @@ const theme = createTheme({
 
 const AddProduct = () => {
 
+    const QueryClient = useQueryClient()
+
     const dispatch = useDispatch()
 
     const schema = yup.object().shape({
@@ -71,6 +72,43 @@ const AddProduct = () => {
             onSuccess: (response) => {
                 if (response.status === 201) {
                     dispatch(setInformation(data))
+                    QueryClient.setQueryData('todos', (oldData) => {
+                        
+                        if (!oldData || !oldData.pages) {
+                            return {
+                                pages: [
+                                    [data] 
+                                ]
+                            };
+                        }
+
+                        const lastPageIndex = oldData.pages.length - 1;
+                        const lastPage = oldData.pages[lastPageIndex];
+                        const maxItemsPerPage = 10; 
+
+                        
+                        if (lastPage.length >= maxItemsPerPage) {
+                           
+                            return {
+                                ...oldData,
+                                pages: [
+                                    ...oldData.pages,
+                                    [data]
+                                ]
+                            };
+                        } else {
+                           
+                            return {
+                                ...oldData,
+                                pages: [
+                                    ...oldData.pages.slice(0, lastPageIndex),
+                                    [...lastPage, data]
+                                ]
+                            };
+                        }
+                    });
+
+                    console.log(QueryClient.getQueryData('todos'))
                     reset()
                 }
             }

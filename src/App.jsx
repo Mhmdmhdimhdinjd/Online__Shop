@@ -36,7 +36,7 @@ const App = () => {
 
           <Route path="/Online__Shop/Shoppingbasket" element={<PrivateRoute><Shoppingbasket /></PrivateRoute>} />
 
-          <Route path='/Online__Shop/add-product' element={<AddProduct/>}/>
+          <Route path='/Online__Shop/add_product' element={<AddProduct/>}/>
 
           <Route path="/Online__Shop/*" element={<Notfound />} />
 
