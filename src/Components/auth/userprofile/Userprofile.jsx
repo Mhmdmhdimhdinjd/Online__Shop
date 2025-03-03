@@ -22,7 +22,7 @@ const Userprofile = () => {
             onSuccess: () => {
                 dispatch(logoutUser())
 
-                navigate('/onlineshop-nini/home')
+                navigate('/Online__Shop/home')
             }
         })
 
