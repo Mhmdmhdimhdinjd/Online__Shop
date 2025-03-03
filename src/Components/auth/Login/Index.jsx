@@ -29,7 +29,7 @@ const LoginComponent = () => {
                     if (storedUser.username === data.username && storedUser.password === data.password) {
                         dispatch(loginUser(storedUser));
                         let redirectPath = localStorage.getItem('userredirect');
-                        navigate(redirectPath || '/oOnline__Shop')
+                        navigate(redirectPath || '/Online__Shop')
                     } else {
                         console.log('نام کاربری یا رمز عبور نادرست است');
                     }
