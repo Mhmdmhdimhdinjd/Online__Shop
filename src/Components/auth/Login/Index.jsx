@@ -1,5 +1,5 @@
 import { Box, Grid, Button, InputLabel, createTheme, ThemeProvider, Typography } from "@mui/material";
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import loginimg from '../../../assets/images/login.jpg';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -19,6 +19,9 @@ const LoginComponent = () => {
 
     const { mutate, isLoading } = LoginQuery__handler()
 
+    const [Loginerror, setLoginerror] = useState(null)
+
+
 
     const Submited = (data) => {
 
@@ -31,9 +34,8 @@ const LoginComponent = () => {
                         let redirectPath = localStorage.getItem('userredirect');
                         navigate(redirectPath || '/Online__Shop')
                     } else {
-                        console.log('نام کاربری یا رمز عبور نادرست است');
+                        setLoginerror('نام کاربری یا رمز عبور نادرست است');
                     }
-                    reset()
                 }
             },
         })
@@ -69,7 +71,7 @@ const LoginComponent = () => {
     });
 
 
-    const { handleSubmit, control,reset, formState: { errors } } = useForm({
+    const { handleSubmit, control, reset, formState: { errors }, getValues } = useForm({
         resolver: yupResolver(userSchema),
         defaultValues: {
             username: "",
@@ -77,13 +79,16 @@ const LoginComponent = () => {
         }
     });
 
-
+    useEffect(() => {
+        setLoginerror(null)
+    }
+        , [getValues('username'), getValues('password')])
 
     return (
         <ThemeProvider theme={theme}>
             <Box sx={{ pb: 16, maxWidth: '94rem', width: '100%', position: 'relative' }}>
                 <div className="circle"></div>
-                <Typography fontFamily={'gandom'} color="white" fontSize={32} textAlign={'center'} sx={{textShadow :'0 0 4px rgba(0, 0, 0, 0.9)'}} my={6}>ورودبه برنج نی نی</Typography>
+                <Typography fontFamily={'gandom'} color="white" fontSize={32} textAlign={'center'} sx={{ textShadow: '0 0 4px rgba(0, 0, 0, 0.9)' }} my={6}>ورودبه برنج نی نی</Typography>
                 <Grid container sx={{ width: '80%', height: '20rem', mx: 'auto', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(30px)', border: '#fff solid 4px', borderRadius: '2rem', overflow: 'hidden' }}>
                     <Grid item xs={10} sm={8}>
                         <form style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} onSubmit={handleSubmit(Submited)}>
@@ -95,7 +100,7 @@ const LoginComponent = () => {
                                     <input disabled={isLoading} className="login__input" {...field} label="email" variant="outlined" />
                                 }
                             />
-                            {errors.email && <Typography fontFamily={'gandom'} fontSize={12} color="black">{errors.email.message}</Typography>}
+                            {errors.username && <Typography fontFamily={'gandom'} fontSize={12} color="black">{errors.username.message}</Typography>}
                             <InputLabel>رمز عبور</InputLabel>
                             <Controller
                                 name="password"
@@ -104,7 +109,8 @@ const LoginComponent = () => {
                                     <input type="password" disabled={isLoading} className="login__input" {...field} label="address" variant="outlined" />
                                 }
                             />
-                            {errors.address && <Typography fontFamily={'gandom'} fontSize={12} color="black">{errors.address.message}</Typography>}
+                            {errors.password && <Typography fontFamily={'gandom'} fontSize={12} color="black">{errors.password.message}</Typography>}
+                            {Loginerror && <Typography fontFamily={'gandom'} fontSize={12} color="black">{Loginerror}</Typography>}
                             <Button size="large" variant="contained" sx={{ width: '50%', color: 'black', backgroundColor: '#fff' }} type="submit">تایید</Button>
                         </form>
                     </Grid>
