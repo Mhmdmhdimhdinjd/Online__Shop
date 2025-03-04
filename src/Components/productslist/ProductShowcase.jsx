@@ -9,8 +9,6 @@ const ProductShowcase = () => {
 
     const { data } = UseInfiniteTodos();
 
-    console.log(data)
-
     const products = data?.pages.flatMap((page) => page);
 
 
