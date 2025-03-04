@@ -153,7 +153,7 @@ const ProductSlider = () => {
                     )
                 })}
 
-                <SwiperSlide >
+                <SwiperSlide style={{width:'180px'}}>
                     <EntierHandler/>
                 </SwiperSlide>
                 
