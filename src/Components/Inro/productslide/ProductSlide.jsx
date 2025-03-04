@@ -4,7 +4,7 @@ import { Button, Card, CardMedia, CardContent, Typography, Box } from '@mui/mate
 import { addItem } from '/src/redux/reducers/CartReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import productImg from '../../../assets/images/برنج نی نی 04.png'
-
+import toast from 'react-hot-toast';
 
 const ProductSlide = ({ product }) => {
 
@@ -22,6 +22,8 @@ const ProductSlide = ({ product }) => {
         setTimeout(() => {
             setAdded(false);
         }, 2000);
+
+        toast.success('محصول با موفقیت به سبد خرید اضافه شد')
 
     };
 

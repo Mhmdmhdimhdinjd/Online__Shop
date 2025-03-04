@@ -6,7 +6,7 @@ function UseInfiniteTodos() {
         queryKey: ['todos'],
         initialPageParam: 1,
         queryFn: async function ({ pageParam }) {
-            const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?_page=${pageParam}&_limit=3`);
+            const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?_page=${pageParam}&_limit=10`);
             return response.data;
         },
         getNextPageParam: function (lastPage, allPages) {

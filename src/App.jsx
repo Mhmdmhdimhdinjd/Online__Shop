@@ -11,7 +11,7 @@ import PrivateRoute from './navigation/PrivateRoute';
 import Profile from './pages/profile/Profile';
 import ProductDetails from './pages/productdetail/ProductDetails';
 import AddProduct from './pages/AddProduct/AddProduct';
-
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
 
@@ -22,9 +22,11 @@ const App = () => {
 
       <Router>
 
+        <Toaster position='bottom-right'/>
+
         <Routes>
 
-          <Route path='/Online__Shop/' element={<Home />} />
+          <Route path='/Online__Shop' element={<Home />} />
 
           <Route path='/Online__Shop/Home' element={<Home />} />
 
@@ -32,11 +34,11 @@ const App = () => {
 
           <Route path="/Online__Shop/Products" element={<Products />} />
 
-          <Route path="/Online__Shop/product/:id" element={<ProductDetails />}/>
+          <Route path="/Online__Shop/product/:id" element={<ProductDetails />} />
 
           <Route path="/Online__Shop/Shoppingbasket" element={<PrivateRoute><Shoppingbasket /></PrivateRoute>} />
 
-          <Route path='/Online__Shop/add_product' element={<AddProduct/>}/>
+          <Route path='/Online__Shop/add_product' element={<AddProduct />} />
 
           <Route path="/Online__Shop/*" element={<Notfound />} />
 

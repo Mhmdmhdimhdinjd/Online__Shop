@@ -11,7 +11,7 @@ function Footer() {
         <Box sx={{ p: '1.5rem', backgroundColor: 'grey.900' }}>
 
             <Box sx={{ maxWidth: '500px', mx: 'auto', borderRadius: '0.5rem', overflow: 'hidden' }}>
-                <Accordion sx={{ backgroundColor: 'grey.800', boxShadow: 'none' }}>
+                <Accordion sx={{ backgroundColor: 'grey.800', boxShadow: 'none', direction: 'rtl' }}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
                         aria-controls="panel1-content"
@@ -27,7 +27,7 @@ function Footer() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion sx={{ backgroundColor: 'grey.800', boxShadow: 'none' }} >
+                <Accordion sx={{ backgroundColor: 'grey.800', boxShadow: 'none', direction: 'rtl' }} >
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
                         aria-controls="panel2-content"
@@ -36,24 +36,26 @@ function Footer() {
                         <Typography fontFamily={'gandom'} component="span" color="white">درباره ما</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography color="white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                        <Typography fontFamily={'gandom'} color="white">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
             </Box>
 
-            <Grid spacing={2} sx={{maxWidth:'300px', mx:'auto' , my:'2rem' , justifyContent:'center'}} container>
+            <Grid spacing={2} sx={{ maxWidth: '300px', mx: 'auto', my: '2rem', justifyContent: 'center' }} container>
 
                 <Grid item >
 
-                    <img src={enamad} style={{borderRadius:'.25rem'}}/>
+                    <img src={enamad} style={{ borderRadius: '.25rem' }} />
 
                 </Grid>
 
                 <Grid item>
 
-                    <img src={samandehi} style={{borderRadius:'.25rem'}}/>
+                    <img src={samandehi} style={{ borderRadius: '.25rem' }} />
 
                 </Grid>
 

@@ -1,4 +1,4 @@
-import { Button, Container, Grid, ThemeProvider, createTheme, Box } from '@mui/material';
+import { Button, Container, ThemeProvider, createTheme, Box, Typography } from '@mui/material';
 import Selectcomponentcontainer from '../../Components/Add product/selectcomponents/container';
 import TextFieldcomponentcontainer from "../../Components/Add product/textFieldcomponents/container";
 import { useForm, Controller } from 'react-hook-form';
@@ -10,6 +10,7 @@ import AddProductHandler from '../../ReactQuery/AddProduct';
 import NavBar from '../../Components/Navbar/Index';
 import Footer from '../../Components/Footer';
 import { useQueryClient } from 'react-query';
+import toast from 'react-hot-toast';
 
 const theme = createTheme({
     typography: {
@@ -47,14 +48,15 @@ const AddProduct = () => {
 
     const dispatch = useDispatch()
 
+
     const schema = yup.object().shape({
-        productName: yup.string().required('نام ضروری است').matches(/^[\u0600-\u06FF\s]+$/, 'فقط حروف فارسی مجاز است'),//روش اول 
-        aboutProduct: yup.string().matches(/^[\u0600-\u06FF\s]+$/, { message: 'فقط حروف فارسی مجاز است', excludeEmptyString: true, }).required('نام خانوادگی ضروری است'),//روش دوم
-        UnitOfSale: yup.object().required("استان را انتخاب کنید"),
-        DeliveryMethod: yup.object().required("شهر را انتخاب کنید"),
+        productName: yup.string().required('نام محصول را وارد کنید').matches(/^[\u0600-\u06FF\s]+$/, 'فقط حروف فارسی مجاز است'),//روش اول 
+        aboutProduct: yup.string().matches(/^[\u0600-\u06FF\s]+$/, { message: 'فقط حروف فارسی مجاز است', excludeEmptyString: true, }).required('توضیحات محصول را وارد کنید'),//روش دوم
+        UnitOfSale: yup.object().required("واحد محصول را انتخاب کنید"),
+        DeliveryMethod: yup.object().required("روش ارسال را انتخاب کنید"),
     });
 
-    const { handleSubmit, reset, control, setValue, formState: { errors } } = useForm({
+    const { handleSubmit, reset, control, setValue, formState: { errors }, getValues } = useForm({
         resolver: yupResolver(schema),
         defaultValues: {
             DeliveryMethod: null,
@@ -73,22 +75,22 @@ const AddProduct = () => {
                 if (response.status === 201) {
                     dispatch(setInformation(data))
                     QueryClient.setQueryData('todos', (oldData) => {
-                        
+
                         if (!oldData || !oldData.pages) {
                             return {
                                 pages: [
-                                    [data] 
+                                    [data]
                                 ]
                             };
                         }
 
                         const lastPageIndex = oldData.pages.length - 1;
                         const lastPage = oldData.pages[lastPageIndex];
-                        const maxItemsPerPage = 10; 
+                        const maxItemsPerPage = 10;
 
-                        
+
                         if (lastPage.length >= maxItemsPerPage) {
-                           
+
                             return {
                                 ...oldData,
                                 pages: [
@@ -97,7 +99,7 @@ const AddProduct = () => {
                                 ]
                             };
                         } else {
-                           
+
                             return {
                                 ...oldData,
                                 pages: [
@@ -107,14 +109,13 @@ const AddProduct = () => {
                             };
                         }
                     });
-
-                    console.log(QueryClient.getQueryData('todos'))
+                    toast.success('محصول با موفقیت اضافه شد')
                     reset()
                 }
-            }
+            },
+            onError: () => toast.error('مشکلی پیش امده . لطفا بعدا دوباره امتحان کنید')
         })
     };
-
 
 
     return (
@@ -129,6 +130,7 @@ const AddProduct = () => {
 
                     <TextFieldcomponentcontainer Controller={Controller} control={control} errors={errors} />
                     <Selectcomponentcontainer Controller={Controller} control={control} setValue={setValue} errors={errors} />
+
 
                     <Box sx={{ direction: 'ltr' }}>
 

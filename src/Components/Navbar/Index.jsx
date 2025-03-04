@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Drawer, InputBase, AppBar, Box, Toolbar, Typography, Button, IconButton, Tooltip, Avatar, styled, alpha, List, ListItem, ListItemText } from '@mui/material';
-import { Menu as MenuIcon, ShoppingCartOutlined as ShoppingCartOutlinedIcon, SearchOutlined as SearchOutlinedIcon, LoginOutlined as LoginOutlinedIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, SearchOutlined as SearchOutlinedIcon, LoginOutlined as LoginOutlinedIcon } from '@mui/icons-material';
 import brandFullHorizontal from '../../assets/images/Negar_1740564017759.png'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import ShoppingBasketIcon from './shoppingBasketIcon';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -77,10 +78,10 @@ function NavBar() {
   const list = () => (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
-        <ListItem component={WhiteButton} endIcon={<ShoppingCartOutlinedIcon />} onClick={() => navigate("/Online__Shop/Shoppingbasket")}>
-          <Typography fontFamily={'gandom'} fontSize={14}>سبد خرید</Typography>
+        <ListItem component={WhiteButton} endIcon={<ShoppingBasketIcon/>} onClick={() => navigate("/Online__Shop/Shoppingbasket")}>
+          <Typography fontFamily={'gandom'} fontSize={14}>سبد خرید   </Typography>
         </ListItem>
-        <ListItem component={WhiteButton} endIcon={<LoginOutlinedIcon/> } onClick={() => navigate('/Online__Shop/profile')}>
+        <ListItem component={WhiteButton} endIcon={<LoginOutlinedIcon />} onClick={() => navigate('/Online__Shop/profile')}>
           <Typography fontFamily={'gandom'} fontSize={14}>{logeduser ? 'پروفایل' : 'ثبت نام  |  ورود'}</Typography>
         </ListItem>
       </List>
@@ -96,16 +97,9 @@ function NavBar() {
           <Box sx={{ display: 'flex' }}>
             {/* نمایش در اندازه‌های بزرگتر */}
             <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="shopping Basket"
-                sx={{ mr: 2 }}
-                onClick={() => navigate("/Online__Shop/Shoppingbasket")}
-              >
-                <ShoppingCartOutlinedIcon />
-              </IconButton>
+
+              <ShoppingBasketIcon />
+
               <WhiteButton onClick={() => navigate('/Online__Shop/profile')} size="small" endIcon={<LoginOutlinedIcon />}>
                 <Typography fontFamily={'gandom'} fontSize={14}>
                   {logeduser ? 'پروفایل' : 'ثبت نام  |  ورود'}
