@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Typography, Box, Button, Skeleton } from '@mui/material';
 import { useSelector } from 'react-redux';
+import productImage from '../../assets/images/برنج نی نی 04.png'
+import toast from 'react-hot-toast';
 
 const Productdetailcomponents = ({ product, addToCart }) => {
   const [added, setAdded] = useState(false);
@@ -13,6 +15,7 @@ const Productdetailcomponents = ({ product, addToCart }) => {
     setTimeout(() => {
       setAdded(false);
     }, 2000);
+    toast.success('محصول با موفقیت به سبد خرید اضافه شد')
   };
 
   return (
@@ -23,7 +26,7 @@ const Productdetailcomponents = ({ product, addToCart }) => {
           {!product ? (
             <Skeleton variant="rectangular" width={350} height={350} />
           ) : (
-            <img src={product.image} alt="" style={{ maxWidth: '350px' }} />
+            <img src={productImage} alt="" style={{ maxWidth: '350px' }} />
           )}
         </Grid>
 
@@ -40,7 +43,7 @@ const Productdetailcomponents = ({ product, addToCart }) => {
                 <Typography variant="h4" gutterBottom>
                   {product.title}
                 </Typography>
-                <Typography>{product.description}</Typography>
+                <Typography>{product.body}</Typography>
               </>
             )}
           </Box>
@@ -61,7 +64,7 @@ const Productdetailcomponents = ({ product, addToCart }) => {
                   padding: '10px',
                 }}
               >
-                امتیاز این محصول از مجموع {product.rating.count} نظر {product.rating.rate} از 5 است
+                امتیاز این محصول از مجموع 5 نظر 3.7 از 5 است
               </Typography>
             )}
             <Box display="flex" flexDirection="column" alignItems="center" mt={6}>
@@ -72,7 +75,7 @@ const Productdetailcomponents = ({ product, addToCart }) => {
                 </>
               ) : (
                 <>
-                  <Typography>{product.price} $</Typography>
+                  <Typography>1500000 $</Typography>
                   <Button
                     variant="contained"
                     color={logeduser ? (added ? 'success' : 'primary') : 'error'}

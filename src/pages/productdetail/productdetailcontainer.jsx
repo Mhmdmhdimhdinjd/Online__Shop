@@ -22,10 +22,6 @@ const ProductDetailscontainer = () => {
         dispatch(addItem(product));
     };
 
-    // if (isLoading || !product) {
-    //     return <div>Loading...</div>;
-    // }
-
     if (error) {
         return <div>Error loading product details</div>;
     }
@@ -34,9 +30,6 @@ const ProductDetailscontainer = () => {
         <>
             <Navbar />
             <Paper elevation={3} sx={{ borderRadius: '30px', my: 4 }}>
-                {/* <Box p={4} color="gray">
-                    <Typography>{product.category}</Typography>
-                </Box> */}
                 <Productdetailcomponents addToCart={addToCart} product={product} />
             </Paper>
             <Footer />

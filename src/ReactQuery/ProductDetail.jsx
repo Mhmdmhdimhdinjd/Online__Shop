@@ -6,7 +6,7 @@ const ProductDetail =(id)=> {
     const {data,isLoading , error} = useQuery({
         queryKey:['productDetail' , id], 
         queryFn:async () => {
-           const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
+           const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
            return response.data
         }
     })
