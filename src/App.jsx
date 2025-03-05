@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Provider } from "react-redux";
-import Store from './Redux/Store'
-import Home from './Pages/Home/Index'
+import Store from './redux/Store'
+import Home from './pages/Home/index'
 import Products from './pages/Products/index';
 import Notfound from './Pages/NotFound/index';
 import Shoppingbasket from './Pages/Shoppingbasket/ShoppingBasket';
