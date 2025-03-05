@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Drawer, InputBase, AppBar, Box, Toolbar, Typography, Button, IconButton, Tooltip, Avatar, styled, alpha, List, ListItem, ListItemText } from '@mui/material';
+import { Drawer, InputBase, AppBar, Box, Toolbar, Typography, Button, IconButton, styled, alpha, List, ListItem } from '@mui/material';
 import { Menu as MenuIcon, SearchOutlined as SearchOutlinedIcon, LoginOutlined as LoginOutlinedIcon } from '@mui/icons-material';
-import brandFullHorizontal from '../../assets/images/Negar_1740564017759.png'
+import brandFullHorizontal from '../../Assets/Images/Negar_1740564017759.png'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import ShoppingBasketIcon from './shoppingBasketIcon';
+import ShoppingBasketIcon from './ShoppingBasketIcon';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -78,7 +78,7 @@ function NavBar() {
   const list = () => (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
-        <ListItem component={WhiteButton} endIcon={<ShoppingBasketIcon/>} onClick={() => navigate("/Online__Shop/Shoppingbasket")}>
+        <ListItem component={WhiteButton} endIcon={<ShoppingBasketIcon />} onClick={() => navigate("/Online__Shop/Shoppingbasket")}>
           <Typography fontFamily={'gandom'} fontSize={14}>سبد خرید   </Typography>
         </ListItem>
         <ListItem component={WhiteButton} endIcon={<LoginOutlinedIcon />} onClick={() => navigate('/Online__Shop/profile')}>

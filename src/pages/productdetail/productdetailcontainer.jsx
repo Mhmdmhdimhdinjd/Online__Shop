@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addItem } from '/src/redux/reducers/CartReducer';
-import Productdetailcomponents from '../../Components/productdetails/podectdetailcomponent';
+import { addItem } from '/src/Redux/Reducers/Cart';
+import Productdetailcomponents from '../../Components/ProductDetails/ProductDetailComponent';
 import { Paper, Box, Typography } from '@mui/material';
 import Navbar from '../../Components/Navbar/Index';
-import Footer from '../../Components/Footer/index';
-import ProductDetail from '../../ReactQuery/ProductDetail';
+import Footer from '../../Components/Footer/Index';
+import ProductDetail from '../../ReactQuery/ProductDetailHandler';
 
 const ProductDetailscontainer = () => {
     const { id } = useParams();

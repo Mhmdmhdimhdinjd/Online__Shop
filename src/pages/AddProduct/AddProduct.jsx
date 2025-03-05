@@ -1,14 +1,14 @@
 import { Button, Container, ThemeProvider, createTheme, Box, Typography } from '@mui/material';
-import Selectcomponentcontainer from '../../Components/Add product/selectcomponents/container';
-import TextFieldcomponentcontainer from "../../Components/Add product/textFieldcomponents/container";
+import Selectcomponentcontainer from '../../Components/AddProduct/selectcomponents/container';
+import TextFieldcomponentcontainer from "../../Components/AddProduct/textfieldcomponents/Container";
 import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from 'react-redux';
-import { setInformation } from '../../redux/reducers/Slice';
-import AddProductHandler from '../../ReactQuery/AddProduct';
+import { setInformation } from '../../Redux/Reducers/AddProduct';
+import AddProductHandler from '../../ReactQuery/AddProductHandler';
 import NavBar from '../../Components/Navbar/Index';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Index'
 import { useQueryClient } from 'react-query';
 import toast from 'react-hot-toast';
 
@@ -56,7 +56,7 @@ const AddProduct = () => {
         DeliveryMethod: yup.object().required("روش ارسال را انتخاب کنید"),
     });
 
-    const { handleSubmit, reset, control, setValue, formState: { errors }, getValues } = useForm({
+    const { handleSubmit, reset, control, setValue, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
         defaultValues: {
             DeliveryMethod: null,

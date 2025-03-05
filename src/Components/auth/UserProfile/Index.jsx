@@ -1,16 +1,16 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logoutUser } from '/src/redux/reducers/AuthSlice';
+import { logoutUser } from '/src/Redux/Reducers/Auth';
 import React from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
-import lgOutHandler from "../../../ReactQuery/lgOutHandler";
+import LogOutHandler from "../../../ReactQuery/LogOutHandler";
 
 const Userprofile = () => {
 
     const user = JSON.parse(localStorage.getItem('logeduser'))
 
-    const { mutate, isLoading } = lgOutHandler()
+    const { mutate, isLoading } = LogOutHandler()
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

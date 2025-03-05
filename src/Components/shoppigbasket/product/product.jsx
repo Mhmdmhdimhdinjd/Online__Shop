@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button, Card, CardContent, CardMedia, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { removeItem } from "../../../redux/reducers/CartReducer";
-import productImg from '../../../assets/images/برنج نی نی 04.png'
+import { removeItem } from "../../../redux/reducers/Cart";
+import productImg from '../../../Assets/Images/برنج نی نی 04.png'
 
 
 

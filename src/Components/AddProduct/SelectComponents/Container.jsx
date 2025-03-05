@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Selectcomponent from "./index";
+import Selectcomponent from "./Index";
 import { Grid } from "@mui/material";
 import { useWatch } from "react-hook-form";
 

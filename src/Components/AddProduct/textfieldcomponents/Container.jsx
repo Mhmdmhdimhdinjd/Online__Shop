@@ -1,5 +1,5 @@
 import React from "react";
-import TextFieldcomponent from ".";
+import TextFieldcomponent from "./Index";
 import { Grid } from "@mui/material";
 
 const TextFielddata = [

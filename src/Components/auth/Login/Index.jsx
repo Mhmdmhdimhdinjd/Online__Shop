@@ -1,13 +1,13 @@
 import { Box, Grid, Button, InputLabel, createTheme, ThemeProvider, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import loginimg from '../../../assets/images/login.jpg';
+import loginimg from '../../../Assets/Images/login.jpg';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string } from 'yup';
 import { useDispatch } from "react-redux";
-import LoginQuery__handler from "../../../ReactQuery/LoginComponent"
+import LoginQuery__handler from "../../../ReactQuery/LoginHandler"
 import { useNavigate } from "react-router-dom";
-import { loginUser } from '/src/redux/reducers/AuthSlice';
+import { loginUser } from '/src/Redux/Reducers/Auth';
 
 
 const LoginComponent = () => {

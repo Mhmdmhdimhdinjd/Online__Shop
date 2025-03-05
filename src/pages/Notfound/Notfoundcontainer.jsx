@@ -1,5 +1,5 @@
 import React from "react";
-import Notfoundcomponent from "../../Components/Notfound/Notfoundcomponents";
+import Notfoundcomponent from "../../Components/NotFound/NotFoundComponents";
 import { Box } from "@mui/material";
 
 const Notfoundcontainer = () => {

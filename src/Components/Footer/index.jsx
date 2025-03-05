@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid, Box, Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import enamad from '/src/assets/images/enamad.jpg'
-import samandehi from '/src/assets/images/samandehi.jpg'
+import enamad from '/src/Assets/Images/enamad.jpg'
+import samandehi from '/src/Assets/Images/samandehi.jpg'
 
 
 
-function Footer() {
+const Footer = () => {
     return (
         <Box sx={{ p: '1.5rem', backgroundColor: 'grey.900' }}>
 

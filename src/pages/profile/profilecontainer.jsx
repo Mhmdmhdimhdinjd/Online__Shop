@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from 'react-redux';
-import Userprofile from "../../Components/auth/userprofile/Userprofile";
-import Login from "../../Components/auth/Login/Index";
-import Signup from "../../Components/auth/signup/index";
+import Userprofile from "../../Components/Auth/UserProfile/Index";
+import Login from "../../Components/Auth/Login/Index";
+import Signup from "../../Components/Auth/SignUp/Index";
 
 
 const Profilecontainer = () => {

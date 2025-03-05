@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import ProductGrid from "../../Components/shoppigbasket/shoppingbasketgrid/shoppingbasketgrid";
+import ProductGrid from "../../Components/shoppigbasket/ShoppingBasketGrid/ShoppingBasketGrid";
 import Navbar from "../../Components/Navbar/Index";
-import Footer from "../../Components/Footer/index";
+import Footer from "../../Components/Footer/Index";
 import { Box, Container, Button, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
-import { clearCart } from "../../redux/reducers/CartReducer";
+import { clearCart } from "../../Redux/Reducers/Cart";
 import { useNavigate } from "react-router-dom";
 
 

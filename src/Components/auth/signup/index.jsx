@@ -1,13 +1,13 @@
 import { Box, Grid, Button, InputLabel, createTheme, ThemeProvider, Typography } from "@mui/material";
 import React, { useRef } from "react";
-import loginimg from '../../../assets/images/login.jpg';
+import loginimg from '../../../Assets/Images/login.jpg';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { object, string } from 'yup';
 import { useDispatch } from "react-redux";
-import SignupHndler from "../../../ReactQuery/SignupHndler";
+import SignupHndler from "../../../ReactQuery/SignUpHandler";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from '/src/redux/reducers/AuthSlice';
+import { registerUser } from '/src/Redux/Reducers/Auth';
 
 
 const SignUpComponent = () => {

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const storedData = JSON.parse(localStorage.getItem('ProductInformation'));
 
-const AddProduct = createSlice({
+const AddProductSlice = createSlice({
   name: 'NewProduct',
   initialState: {
     ProductInformation: storedData ? storedData : null
@@ -16,6 +16,6 @@ const AddProduct = createSlice({
   }
 });
 
-export const { setInformation } = AddProduct.actions;
+export const { setInformation } = AddProductSlice.actions;
 
-export default AddProduct.reducer;
+export default AddProductSlice.reducer;

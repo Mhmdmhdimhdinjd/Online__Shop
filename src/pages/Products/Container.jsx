@@ -1,10 +1,10 @@
 import ProductGrid from "../../Components/productGrid/Productgrid";
-import Product from "../../Components/product/product";
+import Product from "../../Components/Product/Product";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
 import EntierHandler from "../../Components/entierHandler";
 import { Container, Typography, Box , Skeleton } from "@mui/material";
 import NavBar from "../../Components/Navbar/Index";
-import Footer from '../../Components/Footer/index'
+import Footer from '../../Components/Footer/Index'
 
 
 const Productcscontainer = () => {

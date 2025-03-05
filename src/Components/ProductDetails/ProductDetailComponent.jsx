@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { Typography, Box, Button, Skeleton } from '@mui/material';
 import { useSelector } from 'react-redux';
-import productImage from '../../assets/images/برنج نی نی 04.png'
+import productImage from '../../Assets/Images/برنج نی نی 04.png'
 import toast from 'react-hot-toast';
 
 const Productdetailcomponents = ({ product, addToCart }) => {

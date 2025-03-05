@@ -1,6 +1,6 @@
 import React from "react";
 import ProductGrid from "../productGrid/Productgrid";
-import Product from "../product/product";
+import Product from "../Product/Product";
 import { Typography, Box, Skeleton } from "@mui/material";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
 import EntierHandler from "../entierHandler";
@@ -38,7 +38,7 @@ const ProductShowcase = () => {
       {products ? (
         <ProductGrid products={products} Product={Product} />
       ) : (
-        
+
         <Box
           sx={{
             display: "grid",
