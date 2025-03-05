@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Provider } from "react-redux";
-import store from './Redux/Store'
+import Store from './Redux/Store'
 import Home from './Pages/Home/Index'
 import Products from './pages/Products/index';
 import Notfound from './Pages/NotFound/index';
@@ -18,7 +18,7 @@ const App = () => {
 
   return (
 
-    <Provider store={store}>
+    <Provider store={Store}>
 
       <Router>
 
