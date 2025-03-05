@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Provider } from "react-redux";
-import store from './redux/store'
-import Home from './pages/Home/index'
+import store from './Redux/Store'
+import Home from './Pages/Home/Index'
 import Products from './pages/Products/index';
-import Notfound from './pages/Notfound/Notfound';
-import Shoppingbasket from './pages/Shoppingbasket/ShoppingBasket';
-import PrivateRoute from './navigation/PrivateRoute';
-import Profile from './pages/profile/Profile';
-import ProductDetails from './pages/productdetail/ProductDetails';
-import AddProduct from './pages/AddProduct/AddProduct';
+import Notfound from './Pages/NotFound/index';
+import Shoppingbasket from './Pages/Shoppingbasket/ShoppingBasket';
+import PrivateRoute from './Navigation/PrivateRoute';
+import Profile from './Pages/Profile/Profile';
+import ProductDetails from './Pages/productdetail/ProductDetails';
+import AddProduct from './Pages/AddProduct/AddProduct';
 import { Toaster } from 'react-hot-toast';
 
 const App = () => {
