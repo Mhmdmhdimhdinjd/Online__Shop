@@ -1,13 +1,14 @@
+// store.js
 import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './Reducers/Cart';
-import authReducer from './Reducers/Auth'; 
-import AddProductSlice from './Reducers/AddProduct';
+import cartReducer from './Reducers/CartReducer';
+import authReducer from './Reducers/AuthReducer'; // فرض می‌کنیم authSlice در این مسیر است
+import addProductReducer from './Reducers/AddProductReducer';
 
 const store = configureStore({
   reducer: {
     cart: cartReducer,
-    auth: authReducer,
-    AddProduct : AddProductSlice    
+    auth: authReducer, 
+    newproduct: addProductReducer,
   },
 });
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { useDispatch , useSelector} from 'react-redux';
-import { addItem } from '/src/Redux/Reducers/Cart';
+import { addItem } from '/src/Redux/Reducers/CartReducer';
 import productImg from '../../Assets/Images/برنج نی نی 04.png'
 import toast from "react-hot-toast";
 

@@ -7,7 +7,7 @@ import { object, string } from 'yup';
 import { useDispatch } from "react-redux";
 import LoginQuery__handler from "../../../ReactQuery/LoginHandler"
 import { useNavigate } from "react-router-dom";
-import { loginUser } from '/src/Redux/Reducers/Auth';
+import { loginUser } from '/src/Redux/Reducers/AuthReducer';
 
 
 const LoginComponent = () => {

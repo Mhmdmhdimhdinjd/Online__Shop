@@ -7,7 +7,7 @@ import { object, string } from 'yup';
 import { useDispatch } from "react-redux";
 import SignupHndler from "../../../ReactQuery/SignUpHandler";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from '/src/Redux/Reducers/Auth';
+import { registerUser } from '/src/Redux/Reducers/AuthReducer';
 
 
 const SignUpComponent = () => {

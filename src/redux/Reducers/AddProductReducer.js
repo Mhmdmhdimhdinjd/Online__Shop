@@ -1,3 +1,4 @@
+// AddProductSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const storedData = JSON.parse(localStorage.getItem('ProductInformation'));
@@ -11,7 +12,7 @@ const AddProductSlice = createSlice({
     setInformation: (state, action) => {
       state.ProductInformation = action.payload;
       localStorage.setItem('ProductInformation', JSON.stringify(action.payload));
-      console.log(state.ProductInformation)
+      console.log(state.ProductInformation);
     },
   }
 });

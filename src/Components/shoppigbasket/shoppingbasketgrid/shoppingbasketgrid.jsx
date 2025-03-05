@@ -1,5 +1,5 @@
 import React from "react";
-import Shopping_b_Product from "../product/product";
+import Shopping_b_Product from "../ProductComponent";
 import Grid from '@mui/material/Grid';
 
 

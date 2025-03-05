@@ -5,10 +5,10 @@ import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from 'react-redux';
-import { setInformation } from '../../Redux/Reducers/AddProduct';
+import { setInformation } from '../../Redux/Reducers/AddProductReducer';
 import AddProductHandler from '../../ReactQuery/AddProductHandler';
 import NavBar from '../../Components/Navbar/Index';
-import Footer from '../../Components/Footer/Index'
+import Footer from '../../Components/Footer'
 import { useQueryClient } from 'react-query';
 import toast from 'react-hot-toast';
 

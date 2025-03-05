@@ -1,5 +1,5 @@
 import ProductGrid from "../../Components/productGrid/Productgrid";
-import Product from "../../Components/Product/Product";
+import Product from "../../Components/ProductComponent";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
 import EntierHandler from "../../Components/entierHandler";
 import { Container, Typography, Box , Skeleton } from "@mui/material";

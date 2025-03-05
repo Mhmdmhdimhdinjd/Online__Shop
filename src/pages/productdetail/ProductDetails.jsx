@@ -1,11 +1,11 @@
 import React from "react";
-import ProductDetailscontainer from "./ProductDetailContainer";
+import container from './Container';
 
 const ProductDetails = () => {
 
-return(
-<ProductDetailscontainer/>
-)
+    return (
+        <ProductDetailscontainer />
+    )
 
 }
 

@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logoutUser } from '/src/Redux/Reducers/Auth';
+import { logoutUser } from '/src/Redux/Reducers/AuthReducer';
 import React from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
 import LogOutHandler from "../../../ReactQuery/LogOutHandler";

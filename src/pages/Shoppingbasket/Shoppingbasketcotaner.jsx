@@ -4,7 +4,7 @@ import ProductGrid from "../../Components/shoppigbasket/ShoppingBasketGrid/Shopp
 import Navbar from "../../Components/Navbar/Index";
 import Footer from "../../Components/Footer/Index";
 import { Box, Container, Button, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
-import { clearCart } from "../../Redux/Reducers/Cart";
+import { clearCart } from "../../Redux/Reducers/CartReducer";
 import { useNavigate } from "react-router-dom";
 
 

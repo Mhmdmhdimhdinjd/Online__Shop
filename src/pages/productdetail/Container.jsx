@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addItem } from '/src/Redux/Reducers/Cart';
+import { addItem } from '/src/Redux/Reducers/CartReducer';
 import Productdetailcomponents from '../../Components/ProductDetails/ProductDetailComponent';
 import { Paper, Box, Typography } from '@mui/material';
 import Navbar from '../../Components/Navbar/Index';
-import Footer from '../../Components/Footer/Index';
+import Footer from '../../Components/Footer/index';
 import ProductDetail from '../../ReactQuery/ProductDetailHandler';
 
 const ProductDetailscontainer = () => {
