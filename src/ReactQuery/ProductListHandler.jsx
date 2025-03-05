@@ -4,8 +4,8 @@ import axios from 'axios';
 function UseInfiniteTodos() {
     const { fetchNextPage, data, hasNextPage, isFetchingNextPage } = useInfiniteQuery({
         queryKey: ['todos'],
-        initialPageParam: 1,
-        queryFn: async function ({ pageParam }) {
+        // initialPageParam: 1,
+        queryFn: async function ({ pageParam =1}) {
             const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?_page=${pageParam}&_limit=10`);
             return response.data;
         },
