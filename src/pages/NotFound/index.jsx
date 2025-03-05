@@ -1,5 +1,5 @@
 import React from "react";
-import Notfoundcontainer from "./NotFoundContainer";
+import Notfoundcontainer from "./Container";
 
 const Notfound = () => {
 
