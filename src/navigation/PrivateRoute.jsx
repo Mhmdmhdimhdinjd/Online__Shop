@@ -1,7 +1,7 @@
 import React , {useEffect}from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Profile from '../Pages/Profile/Profile';
+import Profile from '../pages/profile/Profile';
 
 
 const PrivateRoute = ({ children }) => {
