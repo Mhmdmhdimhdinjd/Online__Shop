@@ -7,7 +7,7 @@ import Home from '/src/pages/Home/index'
 import Products from '/src/pages/Products/index';
 import Notfound from '/src/pages/NotFound/index';
 import Shoppingbasket from '/src/pages/Shoppingbasket/ShoppingBasket';
-import PrivateRoute from '/src/Navigation/PrivateRoute';
+import PrivateRoute from '/src/navigation/PrivateRoute';
 import Profile from '/src/pages/Profile/Profile';
 import ProductDetails from '/src/pages/productdetail/ProductDetails';
 import AddProduct from '/src/pages/AddProduct/AddProduct';
