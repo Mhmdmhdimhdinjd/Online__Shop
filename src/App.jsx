@@ -5,12 +5,12 @@ import { Provider } from "react-redux";
 import Store from '/src/redux/store'
 import Home from '/src/pages/Home/index'
 import Products from '/src/pages/Products/index';
-import Notfound from '/src/Pages/NotFound/index';
-import Shoppingbasket from '/src/Pages/Shoppingbasket/ShoppingBasket';
+import Notfound from '/src/pages/NotFound/index';
+import Shoppingbasket from '/src/pages/Shoppingbasket/ShoppingBasket';
 import PrivateRoute from '/src/Navigation/PrivateRoute';
-import Profile from '/src/Pages/Profile/Profile';
-import ProductDetails from '/src/Pages/productdetail/ProductDetails';
-import AddProduct from '/src/Pages/AddProduct/AddProduct';
+import Profile from '/src/pages/Profile/Profile';
+import ProductDetails from '/src/pages/productdetail/ProductDetails';
+import AddProduct from '/src/pages/AddProduct/AddProduct';
 import { Toaster } from 'react-hot-toast';
 
 const App = () => {
