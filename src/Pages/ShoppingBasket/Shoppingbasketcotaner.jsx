@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import ProductGrid from "../../Components/shoppigbasket/ShoppingBasketGrid/ShoppingBasketGrid";
+import ProductGrid from "../../Components/ShoppigBasket/ShoppingBasketGrid/ShoppingBasketGrid";
 import Navbar from "../../Components/Navbar/Index";
 import Footer from "../../Components/Footer";
 import { Box, Container, Button, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
