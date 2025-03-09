@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode } from 'swiper/modules';
-import EntierHandler from "../../entierHandler";
+import EntierHandler from "../../EntierHandler/Index";
 import useInfiniteTodos from "../../../ReactQuery/ProductListHandler";
 import { Skeleton, Box } from '@mui/material';
 
