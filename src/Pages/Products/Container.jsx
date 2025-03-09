@@ -1,7 +1,7 @@
 import ProductGrid from "../../Components/ProductGrid/Productgrid";
 import Product from "../../Components/ProductComponent";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
-import EntierHandler from "../../Components/entierHandler";
+import EntierHandler from "../../Components/EntierHandler/Index";
 import { Container, Typography, Box , Skeleton } from "@mui/material";
 import NavBar from "../../Components/Navbar/Index";
 import Footer from '../../Components/Footer'
