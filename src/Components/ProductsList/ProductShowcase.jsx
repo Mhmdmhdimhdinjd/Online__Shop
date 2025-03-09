@@ -1,9 +1,9 @@
 import React from "react";
-import ProductGrid from "../productGrid/Productgrid";
+import ProductGrid from "../ProductGrid/Productgrid";
 import Product from "../ProductComponent/index";
 import { Typography, Box, Skeleton } from "@mui/material";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
-import EntierHandler from "../entierHandler";
+import EntierHandler from "../EntierHandler/Index";
 
 const ProductShowcase = () => {
   const { data } = UseInfiniteTodos();
