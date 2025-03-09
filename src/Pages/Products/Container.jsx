@@ -1,4 +1,4 @@
-import ProductGrid from "../../Components/productGrid/Productgrid";
+import ProductGrid from "../../Components/ProductGrid/Productgrid";
 import Product from "../../Components/ProductComponent";
 import UseInfiniteTodos from "../../ReactQuery/ProductListHandler";
 import EntierHandler from "../../Components/entierHandler";
