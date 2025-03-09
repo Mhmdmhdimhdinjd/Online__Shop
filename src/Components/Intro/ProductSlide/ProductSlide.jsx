@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
 import { addItem } from '/src/Redux/Reducers/CartReducer';
 import { useDispatch, useSelector } from 'react-redux';
-import productImg from '../../../assets/images/برنج نی نی 04.png'
+import productImg from '../../../Assets/Images/برنج نی نی 04.png'
 import toast from 'react-hot-toast';
 
 const ProductSlide = ({ product }) => {
