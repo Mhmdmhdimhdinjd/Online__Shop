@@ -1,0 +1,14 @@
+@font-face {
+    font-family: gandom;
+    src: url(./assets/fonts/gandom-font/Gandom.ttf);
+}
+
+*{
+    font-family: gandom;
+    text-align: right;
+    text-decoration: none;
+}
+
+h3{
+    text-align: right;
+}

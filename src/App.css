@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+
+.circle {
+    height: 900px;
+    width: 900px;
+    border-radius: 100%;
+    -webkit-border-radius: 900px;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-image: linear-gradient(to right top, #94a3c2, #596888);
+    position: fixed;
+    bottom: -196px;
+    left: -100px;
+    z-index: -1;
+}
+
+
+.login__input {
+    background: none;
+    border: white solid 3px;
+    height: 45px;
+    margin-bottom: 0rem;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    padding-left: 1.5rem;
+    width: 50%;
+    outline: 0;
+    font-family: gandom;
+}
+
+.login__input::placeholder {
+    color: #ffffff;
+}
